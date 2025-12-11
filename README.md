@@ -2,6 +2,8 @@
 
 A generic hydrological analysis workflow for separating baseflow from total streamflow using multiple separation methods. The workflow compares "Without Development" (WOD) scenario data against empirical flow measurements for any gauge site.
 
+![Sample Output](sample_output.png)
+
 ## Overview
 
 This repository contains a Jupyter notebook workflow that performs baseflow separation analysis to distinguish groundwater contributions (baseflow) from total streamflow. The analysis compares two datasets:
