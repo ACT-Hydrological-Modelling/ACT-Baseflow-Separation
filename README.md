@@ -4,6 +4,8 @@ A generic hydrological analysis workflow for separating baseflow from total stre
 
 ![Sample Output](sample_output.png)
 
+![Sample Output 2](sample_output2.png)
+
 ## Overview
 
 This repository contains a Jupyter notebook workflow that performs baseflow separation analysis to distinguish groundwater contributions (baseflow) from total streamflow. The analysis compares two datasets:
