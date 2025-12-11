@@ -4,3 +4,6 @@
 # Ignore HTML files
 *.html
 
+# Ignore temp folder
+temp/
+
