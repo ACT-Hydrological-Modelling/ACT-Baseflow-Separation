@@ -11,11 +11,11 @@ This repository contains a Jupyter notebook workflow that performs baseflow sepa
 
 The primary objective is to understand how baseflow characteristics differ between these two scenarios, providing insights into the hydrological behavior and the impact of development on baseflow patterns.
 
-**Note**: This workflow is designed to work with any gauge site. Example data is provided for gauges 410734 and 410761, but the workflow can be adapted for any gauge by updating the data file paths.
+**Note**: This workflow is designed to work with any gauge site. Example data is provided for gauges that are important in the Lake Burley Griffin model and gauges that are important for setting environmental water requirements for the SWIOID review. The workflow can be adapted for any gauge by updating the data file paths.
 
 ## Purpose
 
-The fundamental goal of this baseflow separation workflow is to improve the determination of baseflow environmental water requirements for the SWIOD review and future hydrological modeling in the ACT. By comparing "Without Development" (WOD) scenarios with empirical flow data, this analysis provides critical insights into:
+The fundamental goal of this baseflow separation workflow is to improve the determination of baseflow environmental water requirements for the SWIOID review and future hydrological modeling in the ACT. By comparing "Without Development" (WOD) scenarios with empirical flow data, this analysis provides critical insights into:
 
 - Baseflow characteristics under naturalized conditions vs. current observed conditions
 - Seasonal patterns and variability in baseflow contributions
@@ -124,8 +124,15 @@ The workflow expects two data files in the `Data/` directory for each gauge site
 - **Empirical data file**: Measured flow data representing observed conditions (e.g., `<gauge_id>_empirical_flow_<period>.csv`)
 
 **Example files provided**:
-- Gauge 410734: `WOD_410734.csv` and `410734_empirical_flow_<period>.csv`
-- Gauge 410761: `WOD_410761.csv` and `410761_empirical_flow_1992_2022.csv`
+
+The repository includes example data organized by purpose:
+
+- **Lake Burley Griffin (LBG) model gauges**: Data for gauges important in the Lake Burley Griffin hydrological model (e.g., gauges 410705, 410729, 410734, 410743, 410772, 410775, 410781, 410790)
+- **SWIOID review gauges**: Data for gauges important for setting environmental water requirements for the SWIOID review (e.g., gauges 410734, 410761)
+
+Example file structure:
+- `Data/LBG/` - Contains data for Lake Burley Griffin model gauges
+- `Data/SWIOID/` - Contains data for SWIOID review gauges (e.g., `WOD_410761.csv`, `410761_empirical_flow_1992_2022.csv`)
 
 Both files should have:
 - Date/time as the index (first column)
@@ -151,11 +158,16 @@ ACT-Baseflow-Separation/
 ├── Baseflow_Separation.ipynb    # Main analysis notebook
 ├── README.md                     # This file
 ├── .gitignore                    # Git ignore rules
-└── Data/                         # Data directory (ignored by git)
-    ├── WOD_410734.csv            # Example: WOD data for gauge 410734
-    ├── 410734_empirical_flow_*.csv
-    ├── WOD_410761.csv            # Example: WOD data for gauge 410761
-    └── 410761_empirical_flow_1992_2022.csv
+└── Data/                         # Data directory
+    ├── LBG/                      # Lake Burley Griffin model gauges
+    │   ├── 410705.csv
+    │   ├── 410729.csv
+    │   ├── 410734.csv
+    │   └── ... (other LBG gauges)
+    └── SWIOID/                   # SWIOID review gauges
+        ├── WOD_410761.csv
+        ├── 410761_empirical_flow_1992_2022.csv
+        └── 410734.csv
 ```
 
 ## Notes
