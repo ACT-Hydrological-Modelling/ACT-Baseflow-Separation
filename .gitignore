@@ -1,6 +1,3 @@
-# Ignore Data directory
-Data/
-
 # Ignore CSV files
 *.csv
 
